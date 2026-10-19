@@ -1,0 +1,217 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Ashbound</title><meta name="description" content="A Nomad&#x27;s Duality: Ashbound, a dark fantasy action RPG for iPhone and Android by SKAWKS."><meta name="claude:viewport-fit-sides" content="cover"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"><style>
+/* Layout: one centered column; a full-bleed image band for the featured game; plain document layout for legal pages */
+:root{
+  --bg:#0f0e0d; --panel:#181614; --line:#2b2723; --fg:#ebe4d8; --mute:#a69d90; --ember:#e08440; --ember-deep:#b3612a;
+  --display:"Cinzel","Trajan Pro",Georgia,serif;
+  --body:"Alegreya Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{background:var(--bg);color:var(--fg)}
+body{font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
+a{color:var(--ember)}
+a:hover{color:#f0a066}
+a:focus-visible,button:focus-visible{outline:2px solid var(--fg);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+header.site{border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:16px}
+.mark{font-family:var(--display);font-weight:700;letter-spacing:.32em;font-size:20px;color:var(--fg);text-decoration:none}
+.mark:hover{color:var(--fg)}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{color:var(--mute);text-decoration:none;font-weight:500}
+nav a:hover,nav a[aria-current="page"]{color:var(--fg)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,6vw,56px);letter-spacing:.02em}
+h2{font-size:clamp(24px,3.4vw,32px)}
+h3{font-size:19px}
+.eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);font-weight:500}
+.lede{font-size:clamp(18px,2.2vw,21px);color:var(--fg);max-width:60ch;margin:0}
+.muted{color:var(--mute)}
+section{padding-block:56px}
+.hero{padding-block:72px 48px;display:grid;gap:18px}
+.feature{position:relative;min-height:420px;display:flex;align-items:flex-end;background:#000 center/cover no-repeat;border-block:1px solid var(--line)}
+.feature::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,14,13,.05) 30%,rgba(15,14,13,.92) 100%)}
+.feature .wrap{position:relative;z-index:1;padding-block:36px;display:grid;gap:12px;width:100%}
+.feature p{max-width:56ch;margin:0}
+.btn{display:inline-block;background:var(--ember);color:#1a0f06;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:6px;justify-self:start}
+.btn:hover{background:#f0a066;color:#1a0f06}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.tag{display:inline-block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ember);font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.grid>*{min-width:0}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:640px){.grid.two{grid-template-columns:1fr}}
+.grid h3{margin-bottom:6px}
+.grid p{margin:0;color:var(--mute)}
+.split{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.split>*{min-width:0}
+@media (max-width:760px){.split{grid-template-columns:1fr}}
+figure{margin:0}
+figure img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--line)}
+figcaption{font-size:14px;color:var(--mute);margin-top:8px}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:0}
+.facts dt{color:var(--mute)}
+.facts dd{margin:0}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:24px;display:grid;gap:12px;align-content:start}
+.panel p{margin:0}
+.copy{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.copy code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:16px;background:#0b0a09;border:1px solid var(--line);padding:6px 10px;border-radius:6px;user-select:all}
+.copy button{font:inherit;font-weight:500;color:var(--fg);background:transparent;border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer}
+.doc{max-width:720px;padding-block:56px}
+.doc h1{font-size:clamp(30px,5vw,42px);margin-bottom:6px}
+.doc h2{font-size:22px;margin-top:36px;margin-bottom:8px}
+.doc p,.doc li{max-width:68ch}
+.doc ul{padding-left:20px}
+.faq details{border-bottom:1px solid var(--line);padding-block:14px}
+.faq summary{cursor:pointer;font-weight:700;font-size:18px}
+.faq details p{margin:10px 0 0;color:var(--fg)}
+footer.site{border-top:1px solid var(--line);margin-top:24px}
+footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:24px;color:var(--mute);font-size:15px}
+footer.site nav a{font-size:15px}
+
+.dd{position:relative;display:inline-block}
+.dd-menu{position:absolute;top:100%;left:-12px;min-width:240px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px;display:none;z-index:20}
+.dd-menu a{display:block;padding:8px 10px;border-radius:6px;color:var(--fg)}
+.dd-menu a:hover{background:#221f1c}
+@media (hover:hover){.dd:hover .dd-menu,.dd:focus-within .dd-menu{display:block}}
+.carousel{position:relative;height:clamp(440px,62vh,560px);overflow:hidden;border-block:1px solid var(--line);background:#000}
+.slide{position:absolute;inset:0;display:flex;align-items:flex-end;opacity:0;visibility:hidden;transition:opacity .9s ease,visibility 0s linear .9s}
+.slide.is-on{opacity:1;visibility:visible;transition:opacity .9s ease}
+.slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.08);transition:transform 8s ease-out}
+.slide.is-on .slide-bg{transform:scale(1)}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,14,13,.05) 25%,rgba(15,14,13,.93) 100%);pointer-events:none}
+.slide-body{position:relative;z-index:1;padding-block:36px 56px;display:grid;gap:12px;width:100%;padding-left:max(64px,env(safe-area-inset-left,0px));padding-right:max(64px,env(safe-area-inset-right,0px))}
+.slide-body>*{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.slide.is-on .slide-body>*{opacity:1;transform:none}
+.slide.is-on .slide-body>*:nth-child(2){transition-delay:.15s}
+.slide.is-on .slide-body>*:nth-child(3){transition-delay:.25s}
+.slide.is-on .slide-body>*:nth-child(4){transition-delay:.35s}
+.slide.is-on .slide-body>*:nth-child(5){transition-delay:.45s}
+.slide-body p{max-width:56ch;margin:0}
+.kicker{font-family:var(--display);font-size:18px;color:var(--fg);text-shadow:0 1px 6px rgba(0,0,0,.8)}
+.slide.teaser .slide-bg::before{content:"?";position:absolute;right:12%;top:50%;transform:translateY(-60%);font-family:var(--display);font-size:clamp(140px,22vw,260px);color:rgba(235,228,216,.06)}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:46px;height:46px;border-radius:50%;border:1px solid rgba(235,228,216,.25);background:rgba(15,14,13,.55);color:var(--fg);display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(4px)}
+.arrow:hover{background:rgba(15,14,13,.85);border-color:var(--ember)}
+.arrow svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.arrow.prev{left:max(12px,env(safe-area-inset-left,0px))}
+.arrow.next{right:max(12px,env(safe-area-inset-right,0px))}
+.dots{position:absolute;bottom:18px;left:0;right:0;display:flex;justify-content:center;gap:10px;z-index:3}
+.dot{width:10px;height:10px;border-radius:50%;border:none;background:rgba(235,228,216,.35);cursor:pointer;padding:0}
+.dot.is-on{background:var(--ember);width:26px;border-radius:5px;transition:width .3s}
+@media (max-width:600px){.carousel{height:580px}.slide-body{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));padding-bottom:64px}.arrow{top:auto;bottom:10px;transform:none;width:40px;height:40px}}
+@media (prefers-reduced-motion:reduce){.slide,.slide-bg,.slide-body>*{transition:none!important}.slide-bg{transform:none}}
+.gcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.gcard{display:grid;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;color:var(--fg);text-decoration:none;min-width:0}
+.gcard:hover{border-color:var(--ember);color:var(--fg)}
+.gimg{aspect-ratio:16/9;background-size:cover;background-position:center}
+.gtext{padding:20px;display:grid;gap:8px;align-content:start}
+.gtext p{margin:0}
+.gcard.soon{align-content:center;border-style:dashed}
+.more{color:var(--ember);font-weight:700}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style></head><body>
+<header class="site"><div class="wrap"><a class="mark" href="index.html">SKAWKS</a><nav aria-label="Main"><a href="index.html">Home</a><div class="dd"><a href="games.html" aria-current="page">Games</a><div class="dd-menu" role="menu"><a href="ashbound.html">A Nomad's Duality: Ashbound</a></div></div><a href="upcoming.html">Upcoming</a><a href="support.html">Support</a></nav></div></header>
+<main>
+  <div class="feature" style="background-image:url('img/burial-storm.jpg');min-height:480px" role="img" aria-label="A grieving man stands at a grave in a storm">
+    <div class="wrap">
+      <span class="tag">Coming to iPhone &amp; Android</span>
+      <h1>A Nomad's Duality: Ashbound</h1>
+      <p class="lede">Guide a soul undone by family tragedy, and carve a path through the relentless agony that haunts them.</p>
+    </div>
+  </div>
+
+  <section class="wrap split">
+    <div style="display:grid;gap:16px">
+      <h2>Faith versus Despair</h2>
+      <p style="margin:0">This dark fantasy action RPG chronicles a pious character whose devotion is tested by absolute tragedy. Stripped of their spouse and two children, this broken soul roams from town to town, running blindly from the grief that stalks them, until a fortune teller presents them with a mystical lantern.</p>
+      <p style="margin:0">This treacherous quest unfolds across seven distinct Acts modeled after the stages of loss, demanding the wanderer endure shock, denial, and depression before reaching acceptance. In every chapter, they breach a new territory, overthrow its cruel overlord, and retrieve a lost relic of their family.</p>
+      <p style="margin:0" class="muted">The chronicle begins in the suffocating shadows of the Weeping Woods, now being forged.</p>
+    </div>
+    <figure>
+      <img src="img/lightwarden.jpg" alt="The Lightwarden, a knight in dark plate armor with sword and shield, in three combat poses" width="900" height="327">
+      <figcaption>The Lightwarden: Cloaked in shadow, wielding steel and faith. One of six disciplines to master.</figcaption>
+    </figure>
+  </section>
+
+  <section class="wrap" style="padding-top:8px">
+    <span class="eyebrow">Blood &amp; Iron</span>
+    <h2 style="margin:8px 0 24px">The Art of Slaughter</h2>
+    <div class="grid two">
+      <div><h3>Guard Your Reserves</h3><p>Every swinging strike, sudden dodge, and desperate block depletes your stamina. Exhausting your energy leaves you entirely defenseless, making tactical patience a matter of life and death.</p></div>
+      <div><h3>Seize the Stagger</h3><p>Watch your foes closely. When an enemy's weapon flashes a brilliant white, time your block perfectly to shatter their stance. This leaves them staggered, opening a brief window to unleash devastating retaliation.</p></div>
+      <div><h3>Evade the Unblockable</h3><p>When a foe glows an ominous red, discard all thoughts of blocking. These strikes pierce through any shield, so a perfectly timed dodge is your only salvation.</p></div>
+      <div><h3>Ruthless Defenses</h3><p>Malicious foes dodge your strikes, guard against careless blows, and brutally punish anyone who mindlessly spams attacks. Monstrous bosses grow increasingly lethal and aggressive as their health bleeds away.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <span class="eyebrow">Armed for the Void</span>
+    <h2 style="margin:8px 0 24px">Carve Your Legend</h2>
+    <div class="grid two">
+      <div><h3>Six Nomads</h3><p>Choose your path from six distinct disciplines: Lightwarden, Ranger, Warrior, Monk, Witch, or Nightblade. Each wields specialized armaments and commands its own signature skills and lethal abilities.</p></div>
+      <div><h3>The Sevenfold Infusion</h3><p>Channel the power of your ascension into a sprawling Skill Tree with points earned from leveling up. Beyond your core class abilities, the tree forks into seven primal elemental paths (fire, ice, lightning, earth, water, holy, and shadow), allowing you to imbue weapons, armor, and fresh talents with mystical properties.</p></div>
+      <div><h3>Claim Your Spoils. Forge Your Fate.</h3><p>Scour the ruined world for rare armaments boasting chaotic, random traits. Claim these artifacts, augment them with mystical socketed gems, and bend them to your will. When the road ahead demands greater strength, take your trusted blade to the anvil. Use rare crafting materials to hone your gear, keeping your favorite weapons lethal against the rising tide of darkness.</p></div>
+      <div><h3>Swear Desperate Alliances</h3><p>You do not have to walk the abyss alone. Enlist the services of a sellsword, a bowyer, a hedge witch, or a wandering scholar, each with their own skills.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <span class="eyebrow">The Perilous Path</span>
+    <h2 style="margin:8px 0 24px">Endure, Advance, or Perish</h2>
+    <div class="grid two">
+      <div><h3>The Weight of the Dark</h3><p>The longer you tread through the oppressive shadows without respite, the higher your Agony builds, gradually draining your strength. Seek refuge at Vigil Lanterns to channel your experience, level up, and ease your Agony.</p></div>
+      <div><h3>Contracts of the Board</h3><p>Every settlement hosts a bounty board overflowing with perilous side quests. Hunt down designated abominations and fulfill high-risk contracts to secure gold, rare equipment, and bonus experience.</p></div>
+      <div><h3>Hidden Horrors</h3><p>Monstrous, elite foes lie hidden far off the beaten path for brave souls willing to explore. Slaying these optional terrors yields far greater loot and significant experience.</p></div>
+      <div><h3>Confront the True Terror</h3><p>Once an Act is conquered, test your resolve by replaying it in Nightmare mode. This unforgiving realm features far deadlier enemies, but rewards survivors with exceptionally rare loot and massive experience.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <span class="eyebrow">Free to play</span>
+    <h2 style="margin:8px 0 24px">A Fair Fight</h2>
+    <div class="grid">
+      <div><h3>The Pilgrim's Ascent</h3><p>Earn a steady stream of rewards simply by playing on the free tier, or ascend to the premium tier of the Pilgrimage Pass to maximize your rewards.</p></div>
+      <div><h3>Vanities of the Lost</h3><p>Coming soon: purely aesthetic cloaks and armor skins to customize your wanderer's appearance. They offer no advantages and have zero impact on combat stats.</p></div>
+      <div><h3>The Horizon of Souls</h3><p>Our post-launch roadmap includes online features. Look forward to testing your steel in ranked duels, founding powerful clans, and tackling perilous co-op raids.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="panel">
+      <h2>Watch for the Vigil Lantern</h2>
+      <p>Seek tidings of Ashbound's arrival? Email us with the subject "Ashbound," and we'll alert you when the shadows break.</p>
+      <p><span class="copy"><code>info@skawks.com</code><button type="button" data-copy="info@skawks.com">Copy</button></span></p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <dl class="facts">
+      <dt>Developer</dt><dd>SKAWKS LLC</dd>
+      <dt>Platforms</dt><dd>iPhone and Android (coming soon), with a PC edition planned</dd>
+      <dt>Price</dt><dd>Free to play, with optional in-app purchases</dd>
+      <dt>Content</dt><dd>Fantasy violence, horror, alcohol use and mature themes</dd>
+    </dl>
+  </section>
+  <section class="wrap" id="survey">
+    <div class="panel">
+      <span class="eyebrow">Player survey</span>
+      <h2>Want to help us improve our game?</h2>
+      <p>We're a small studio, and the people who play our games shape what we make next. After you play, tell us what worked and what didn't in a short survey:</p>
+      <ul style="margin:0;padding-left:20px;display:grid;gap:4px">
+        <li>How fun it was, from 1 to 5 stars</li>
+        <li>What you liked, and what you'd change</li>
+        <li>Anything confusing, or too hard or too easy</li>
+        <li>Whether you'd want more Acts</li>
+      </ul>
+      <p>We read every answer, and we use them to fix problems and tune the game before and after launch.</p>
+      <p><b>The survey opens with our first playtest.</b> Want in early? Email us with the subject "Playtest" and we'll send it to you.</p><p><span class="copy"><code>info@skawks.com</code><button type="button" data-copy="info@skawks.com">Copy</button></span></p>
+      
+    </div>
+  </section>
+</main>
+<footer class="site"><div class="wrap"><span>© 2026 SKAWKS LLC · Iowa, USA</span><nav aria-label="Legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav></div></footer>
+<script>
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',()=>{const t=b.getAttribute('data-copy');const done=()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1600)};
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(()=>{const c=b.previousElementSibling;const r=document.createRange();r.selectNodeContents(c);const s=getSelection();s.removeAllRanges();s.addRange(r);});}else{const c=b.previousElementSibling;const r=document.createRange();r.selectNodeContents(c);const s=getSelection();s.removeAllRanges();s.addRange(r);}}));
+</script>
+</body></html>

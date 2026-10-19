@@ -1,0 +1,155 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>SKAWKS Terms of Service</title><meta name="description" content="Terms of Service for SKAWKS LLC games and website."><meta name="claude:viewport-fit-sides" content="cover"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"><style>
+/* Layout: one centered column; a full-bleed image band for the featured game; plain document layout for legal pages */
+:root{
+  --bg:#0f0e0d; --panel:#181614; --line:#2b2723; --fg:#ebe4d8; --mute:#a69d90; --ember:#e08440; --ember-deep:#b3612a;
+  --display:"Cinzel","Trajan Pro",Georgia,serif;
+  --body:"Alegreya Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{background:var(--bg);color:var(--fg)}
+body{font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
+a{color:var(--ember)}
+a:hover{color:#f0a066}
+a:focus-visible,button:focus-visible{outline:2px solid var(--fg);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+header.site{border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:16px}
+.mark{font-family:var(--display);font-weight:700;letter-spacing:.32em;font-size:20px;color:var(--fg);text-decoration:none}
+.mark:hover{color:var(--fg)}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{color:var(--mute);text-decoration:none;font-weight:500}
+nav a:hover,nav a[aria-current="page"]{color:var(--fg)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,6vw,56px);letter-spacing:.02em}
+h2{font-size:clamp(24px,3.4vw,32px)}
+h3{font-size:19px}
+.eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);font-weight:500}
+.lede{font-size:clamp(18px,2.2vw,21px);color:var(--fg);max-width:60ch;margin:0}
+.muted{color:var(--mute)}
+section{padding-block:56px}
+.hero{padding-block:72px 48px;display:grid;gap:18px}
+.feature{position:relative;min-height:420px;display:flex;align-items:flex-end;background:#000 center/cover no-repeat;border-block:1px solid var(--line)}
+.feature::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,14,13,.05) 30%,rgba(15,14,13,.92) 100%)}
+.feature .wrap{position:relative;z-index:1;padding-block:36px;display:grid;gap:12px;width:100%}
+.feature p{max-width:56ch;margin:0}
+.btn{display:inline-block;background:var(--ember);color:#1a0f06;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:6px;justify-self:start}
+.btn:hover{background:#f0a066;color:#1a0f06}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.tag{display:inline-block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ember);font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.grid>*{min-width:0}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:640px){.grid.two{grid-template-columns:1fr}}
+.grid h3{margin-bottom:6px}
+.grid p{margin:0;color:var(--mute)}
+.split{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.split>*{min-width:0}
+@media (max-width:760px){.split{grid-template-columns:1fr}}
+figure{margin:0}
+figure img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--line)}
+figcaption{font-size:14px;color:var(--mute);margin-top:8px}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:0}
+.facts dt{color:var(--mute)}
+.facts dd{margin:0}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:24px;display:grid;gap:12px;align-content:start}
+.panel p{margin:0}
+.copy{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.copy code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:16px;background:#0b0a09;border:1px solid var(--line);padding:6px 10px;border-radius:6px;user-select:all}
+.copy button{font:inherit;font-weight:500;color:var(--fg);background:transparent;border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer}
+.doc{max-width:720px;padding-block:56px}
+.doc h1{font-size:clamp(30px,5vw,42px);margin-bottom:6px}
+.doc h2{font-size:22px;margin-top:36px;margin-bottom:8px}
+.doc p,.doc li{max-width:68ch}
+.doc ul{padding-left:20px}
+.faq details{border-bottom:1px solid var(--line);padding-block:14px}
+.faq summary{cursor:pointer;font-weight:700;font-size:18px}
+.faq details p{margin:10px 0 0;color:var(--fg)}
+footer.site{border-top:1px solid var(--line);margin-top:24px}
+footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:24px;color:var(--mute);font-size:15px}
+footer.site nav a{font-size:15px}
+
+.dd{position:relative;display:inline-block}
+.dd-menu{position:absolute;top:100%;left:-12px;min-width:240px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px;display:none;z-index:20}
+.dd-menu a{display:block;padding:8px 10px;border-radius:6px;color:var(--fg)}
+.dd-menu a:hover{background:#221f1c}
+@media (hover:hover){.dd:hover .dd-menu,.dd:focus-within .dd-menu{display:block}}
+.carousel{position:relative;height:clamp(440px,62vh,560px);overflow:hidden;border-block:1px solid var(--line);background:#000}
+.slide{position:absolute;inset:0;display:flex;align-items:flex-end;opacity:0;visibility:hidden;transition:opacity .9s ease,visibility 0s linear .9s}
+.slide.is-on{opacity:1;visibility:visible;transition:opacity .9s ease}
+.slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.08);transition:transform 8s ease-out}
+.slide.is-on .slide-bg{transform:scale(1)}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,14,13,.05) 25%,rgba(15,14,13,.93) 100%);pointer-events:none}
+.slide-body{position:relative;z-index:1;padding-block:36px 56px;display:grid;gap:12px;width:100%;padding-left:max(64px,env(safe-area-inset-left,0px));padding-right:max(64px,env(safe-area-inset-right,0px))}
+.slide-body>*{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.slide.is-on .slide-body>*{opacity:1;transform:none}
+.slide.is-on .slide-body>*:nth-child(2){transition-delay:.15s}
+.slide.is-on .slide-body>*:nth-child(3){transition-delay:.25s}
+.slide.is-on .slide-body>*:nth-child(4){transition-delay:.35s}
+.slide.is-on .slide-body>*:nth-child(5){transition-delay:.45s}
+.slide-body p{max-width:56ch;margin:0}
+.kicker{font-family:var(--display);font-size:18px;color:var(--fg);text-shadow:0 1px 6px rgba(0,0,0,.8)}
+.slide.teaser .slide-bg::before{content:"?";position:absolute;right:12%;top:50%;transform:translateY(-60%);font-family:var(--display);font-size:clamp(140px,22vw,260px);color:rgba(235,228,216,.06)}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:46px;height:46px;border-radius:50%;border:1px solid rgba(235,228,216,.25);background:rgba(15,14,13,.55);color:var(--fg);display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(4px)}
+.arrow:hover{background:rgba(15,14,13,.85);border-color:var(--ember)}
+.arrow svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.arrow.prev{left:max(12px,env(safe-area-inset-left,0px))}
+.arrow.next{right:max(12px,env(safe-area-inset-right,0px))}
+.dots{position:absolute;bottom:18px;left:0;right:0;display:flex;justify-content:center;gap:10px;z-index:3}
+.dot{width:10px;height:10px;border-radius:50%;border:none;background:rgba(235,228,216,.35);cursor:pointer;padding:0}
+.dot.is-on{background:var(--ember);width:26px;border-radius:5px;transition:width .3s}
+@media (max-width:600px){.carousel{height:580px}.slide-body{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));padding-bottom:64px}.arrow{top:auto;bottom:10px;transform:none;width:40px;height:40px}}
+@media (prefers-reduced-motion:reduce){.slide,.slide-bg,.slide-body>*{transition:none!important}.slide-bg{transform:none}}
+.gcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.gcard{display:grid;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;color:var(--fg);text-decoration:none;min-width:0}
+.gcard:hover{border-color:var(--ember);color:var(--fg)}
+.gimg{aspect-ratio:16/9;background-size:cover;background-position:center}
+.gtext{padding:20px;display:grid;gap:8px;align-content:start}
+.gtext p{margin:0}
+.gcard.soon{align-content:center;border-style:dashed}
+.more{color:var(--ember);font-weight:700}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style></head><body>
+<header class="site"><div class="wrap"><a class="mark" href="index.html">SKAWKS</a><nav aria-label="Main"><a href="index.html">Home</a><div class="dd"><a href="games.html">Games</a><div class="dd-menu" role="menu"><a href="ashbound.html">A Nomad's Duality: Ashbound</a></div></div><a href="upcoming.html">Upcoming</a><a href="support.html">Support</a></nav></div></header>
+<main class="wrap doc">
+  <span class="eyebrow">Legal</span>
+  <h1>Terms of Service</h1>
+  <p class="muted">Last updated: October 18, 2026</p>
+  <p>These terms apply to games published by SKAWKS LLC ("SKAWKS", "we", "us"), including A Nomad's Duality: Ashbound, and to skawks.com. By playing our games or using our website, you agree to these terms. If you got the game from the App Store or Google Play, their terms also apply.</p>
+
+  <h2>License to play</h2>
+  <p>We give you a personal, non-transferable license to install and play our games for your own non-commercial use. You may not copy, modify, reverse engineer, resell or distribute our games, or use cheats, hacks or exploits.</p>
+
+  <h2>In-game items and currency</h2>
+  <p>Games may offer virtual items and currency, earned in play or bought with real money. They have no cash value, can't be exchanged for real money, and are licensed to you rather than sold. Purchases are processed by Apple or Google, and refunds are handled under their policies. We may change, balance or retire in-game items as games are updated.</p>
+
+  <h2>Age</h2>
+  <p>Our games contain mature themes and are intended for players 17 and older.</p>
+
+  <h2>Ownership</h2>
+  <p>Our games, characters, story, art, music, code and trademarks belong to SKAWKS LLC or our licensors. Nothing in these terms transfers them to you.</p>
+
+  <h2>Updates and availability</h2>
+  <p>We may update, change or stop offering a game or feature at any time. We'll try to give notice of major changes.</p>
+
+  <h2>Disclaimer</h2>
+  <p>Our games and website are provided "as is" without warranties of any kind, to the extent allowed by law.</p>
+
+  <h2>Limitation of liability</h2>
+  <p>To the extent allowed by law, SKAWKS is not liable for indirect or consequential damages, and our total liability for any claim is limited to the amount you paid us in the 12 months before the claim.</p>
+
+  <h2>Governing law</h2>
+  <p>These terms are governed by the laws of the State of Iowa, USA, unless the law where you live requires otherwise.</p>
+
+  <h2>Changes to these terms</h2>
+  <p>We may update these terms. If we do, we'll change the date above, and continuing to play means you accept the updated terms.</p>
+
+  <h2>Contact</h2>
+  <p><span class="copy"><code>info@skawks.com</code><button type="button" data-copy="info@skawks.com">Copy</button></span></p>
+</main>
+<footer class="site"><div class="wrap"><span>© 2026 SKAWKS LLC · Iowa, USA</span><nav aria-label="Legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav></div></footer>
+<script>
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',()=>{const t=b.getAttribute('data-copy');const done=()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1600)};
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(()=>{const c=b.previousElementSibling;const r=document.createRange();r.selectNodeContents(c);const s=getSelection();s.removeAllRanges();s.addRange(r);});}else{const c=b.previousElementSibling;const r=document.createRange();r.selectNodeContents(c);const s=getSelection();s.removeAllRanges();s.addRange(r);}}));
+</script>
+</body></html>

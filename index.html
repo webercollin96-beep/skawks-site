@@ -1,0 +1,197 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>SKAWKS</title><meta name="description" content="SKAWKS is an independent game studio in Iowa making original games for phones and PC."><meta name="claude:viewport-fit-sides" content="cover"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"><style>
+/* Layout: one centered column; a full-bleed image band for the featured game; plain document layout for legal pages */
+:root{
+  --bg:#0f0e0d; --panel:#181614; --line:#2b2723; --fg:#ebe4d8; --mute:#a69d90; --ember:#e08440; --ember-deep:#b3612a;
+  --display:"Cinzel","Trajan Pro",Georgia,serif;
+  --body:"Alegreya Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{background:var(--bg);color:var(--fg)}
+body{font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
+a{color:var(--ember)}
+a:hover{color:#f0a066}
+a:focus-visible,button:focus-visible{outline:2px solid var(--fg);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+header.site{border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:16px}
+.mark{font-family:var(--display);font-weight:700;letter-spacing:.32em;font-size:20px;color:var(--fg);text-decoration:none}
+.mark:hover{color:var(--fg)}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{color:var(--mute);text-decoration:none;font-weight:500}
+nav a:hover,nav a[aria-current="page"]{color:var(--fg)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,6vw,56px);letter-spacing:.02em}
+h2{font-size:clamp(24px,3.4vw,32px)}
+h3{font-size:19px}
+.eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);font-weight:500}
+.lede{font-size:clamp(18px,2.2vw,21px);color:var(--fg);max-width:60ch;margin:0}
+.muted{color:var(--mute)}
+section{padding-block:56px}
+.hero{padding-block:72px 48px;display:grid;gap:18px}
+.feature{position:relative;min-height:420px;display:flex;align-items:flex-end;background:#000 center/cover no-repeat;border-block:1px solid var(--line)}
+.feature::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,14,13,.05) 30%,rgba(15,14,13,.92) 100%)}
+.feature .wrap{position:relative;z-index:1;padding-block:36px;display:grid;gap:12px;width:100%}
+.feature p{max-width:56ch;margin:0}
+.btn{display:inline-block;background:var(--ember);color:#1a0f06;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:6px;justify-self:start}
+.btn:hover{background:#f0a066;color:#1a0f06}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.tag{display:inline-block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ember);font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.grid>*{min-width:0}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:640px){.grid.two{grid-template-columns:1fr}}
+.grid h3{margin-bottom:6px}
+.grid p{margin:0;color:var(--mute)}
+.split{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.split>*{min-width:0}
+@media (max-width:760px){.split{grid-template-columns:1fr}}
+figure{margin:0}
+figure img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--line)}
+figcaption{font-size:14px;color:var(--mute);margin-top:8px}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:0}
+.facts dt{color:var(--mute)}
+.facts dd{margin:0}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:24px;display:grid;gap:12px;align-content:start}
+.panel p{margin:0}
+.copy{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.copy code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:16px;background:#0b0a09;border:1px solid var(--line);padding:6px 10px;border-radius:6px;user-select:all}
+.copy button{font:inherit;font-weight:500;color:var(--fg);background:transparent;border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer}
+.doc{max-width:720px;padding-block:56px}
+.doc h1{font-size:clamp(30px,5vw,42px);margin-bottom:6px}
+.doc h2{font-size:22px;margin-top:36px;margin-bottom:8px}
+.doc p,.doc li{max-width:68ch}
+.doc ul{padding-left:20px}
+.faq details{border-bottom:1px solid var(--line);padding-block:14px}
+.faq summary{cursor:pointer;font-weight:700;font-size:18px}
+.faq details p{margin:10px 0 0;color:var(--fg)}
+footer.site{border-top:1px solid var(--line);margin-top:24px}
+footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:24px;color:var(--mute);font-size:15px}
+footer.site nav a{font-size:15px}
+
+.dd{position:relative;display:inline-block}
+.dd-menu{position:absolute;top:100%;left:-12px;min-width:240px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px;display:none;z-index:20}
+.dd-menu a{display:block;padding:8px 10px;border-radius:6px;color:var(--fg)}
+.dd-menu a:hover{background:#221f1c}
+@media (hover:hover){.dd:hover .dd-menu,.dd:focus-within .dd-menu{display:block}}
+.carousel{position:relative;height:clamp(440px,62vh,560px);overflow:hidden;border-block:1px solid var(--line);background:#000}
+.slide{position:absolute;inset:0;display:flex;align-items:flex-end;opacity:0;visibility:hidden;transition:opacity .9s ease,visibility 0s linear .9s}
+.slide.is-on{opacity:1;visibility:visible;transition:opacity .9s ease}
+.slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.08);transition:transform 8s ease-out}
+.slide.is-on .slide-bg{transform:scale(1)}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,14,13,.05) 25%,rgba(15,14,13,.93) 100%);pointer-events:none}
+.slide-body{position:relative;z-index:1;padding-block:36px 56px;display:grid;gap:12px;width:100%;padding-left:max(64px,env(safe-area-inset-left,0px));padding-right:max(64px,env(safe-area-inset-right,0px))}
+.slide-body>*{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.slide.is-on .slide-body>*{opacity:1;transform:none}
+.slide.is-on .slide-body>*:nth-child(2){transition-delay:.15s}
+.slide.is-on .slide-body>*:nth-child(3){transition-delay:.25s}
+.slide.is-on .slide-body>*:nth-child(4){transition-delay:.35s}
+.slide.is-on .slide-body>*:nth-child(5){transition-delay:.45s}
+.slide-body p{max-width:56ch;margin:0}
+.kicker{font-family:var(--display);font-size:18px;color:var(--fg);text-shadow:0 1px 6px rgba(0,0,0,.8)}
+.slide.teaser .slide-bg::before{content:"?";position:absolute;right:12%;top:50%;transform:translateY(-60%);font-family:var(--display);font-size:clamp(140px,22vw,260px);color:rgba(235,228,216,.06)}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:46px;height:46px;border-radius:50%;border:1px solid rgba(235,228,216,.25);background:rgba(15,14,13,.55);color:var(--fg);display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(4px)}
+.arrow:hover{background:rgba(15,14,13,.85);border-color:var(--ember)}
+.arrow svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.arrow.prev{left:max(12px,env(safe-area-inset-left,0px))}
+.arrow.next{right:max(12px,env(safe-area-inset-right,0px))}
+.dots{position:absolute;bottom:18px;left:0;right:0;display:flex;justify-content:center;gap:10px;z-index:3}
+.dot{width:10px;height:10px;border-radius:50%;border:none;background:rgba(235,228,216,.35);cursor:pointer;padding:0}
+.dot.is-on{background:var(--ember);width:26px;border-radius:5px;transition:width .3s}
+@media (max-width:600px){.carousel{height:580px}.slide-body{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));padding-bottom:64px}.arrow{top:auto;bottom:10px;transform:none;width:40px;height:40px}}
+@media (prefers-reduced-motion:reduce){.slide,.slide-bg,.slide-body>*{transition:none!important}.slide-bg{transform:none}}
+.gcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.gcard{display:grid;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;color:var(--fg);text-decoration:none;min-width:0}
+.gcard:hover{border-color:var(--ember);color:var(--fg)}
+.gimg{aspect-ratio:16/9;background-size:cover;background-position:center}
+.gtext{padding:20px;display:grid;gap:8px;align-content:start}
+.gtext p{margin:0}
+.gcard.soon{align-content:center;border-style:dashed}
+.more{color:var(--ember);font-weight:700}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style></head><body>
+<header class="site"><div class="wrap"><a class="mark" href="index.html">SKAWKS</a><nav aria-label="Main"><a href="index.html" aria-current="page">Home</a><div class="dd"><a href="games.html">Games</a><div class="dd-menu" role="menu"><a href="ashbound.html">A Nomad's Duality: Ashbound</a></div></div><a href="upcoming.html">Upcoming</a><a href="support.html">Support</a></nav></div></header>
+<main>
+  <div class="wrap hero">
+    <span class="eyebrow">Independent Game Studio · Iowa</span>
+    <h1>Small team. Bold concepts. Games that stick with you.</h1>
+    <p class="lede">SKAWKS is an independent studio forging distinctive titles for mobile devices and PC. We take a singular, obsessive idea and refine it into an experience that demands your attention from start to finish.</p>
+  </div>
+
+  <section class="carousel" aria-roledescription="carousel" aria-label="Our games" data-count="3">
+    <div class="slide is-on" data-i="0" aria-roledescription="slide" aria-label="1 of 3">
+      <div class="slide-bg" style="background-image:url('img/burial-storm.jpg')" role="img" aria-label="A grieving figure stands at a grave in a storm-lit village"></div>
+      <div class="wrap slide-body">
+        <span class="tag">In Active Development · Coming to iPhone &amp; Android</span><p class="kicker">Tales forged in blood, steel, and sorrow.</p>
+        <h2>A Nomad's Duality: Ashbound</h2>
+        <p>A grieving wanderer traverses a ruined world, holding aloft a fortune teller's strange lantern to hold back the horrors born of their own despair. Experience punishing, tactical combat across seven grim Acts, each reflecting a harrowing stage of loss.</p>
+        <a class="btn" href="ashbound.html">See the game</a>
+      </div>
+    </div><div class="slide teaser" data-i="1" aria-roledescription="slide" aria-label="2 of 3">
+      <div class="slide-bg" style="background:radial-gradient(ellipse at 70% 40%, #5b1f4a 0%, #2a1030 40%, #0f0a12 75%)" aria-hidden="true"></div>
+      <div class="wrap slide-body">
+        <span class="tag">Early design</span>
+        <h2>Untitled music &amp; monsters project</h2>
+        <p>A fresh project in early design, where the rhythm of battle meets monstrous foes. We'll share more when the time is right.</p>
+        <a class="btn" href="upcoming.html">See what's coming</a>
+      </div>
+    </div><div class="slide teaser" data-i="2" aria-roledescription="slide" aria-label="3 of 3">
+      <div class="slide-bg" style="background:radial-gradient(ellipse at 30% 60%, #3a0a0e 0%, #160607 45%, #050404 80%)" aria-hidden="true"></div>
+      <div class="wrap slide-body">
+        <span class="tag">Early design</span>
+        <h2>Untitled horror project</h2>
+        <p>A quiet, intensely dark, and intimately personal concept currently in incubation. More whispers from the dark will be shared down the line.</p>
+        <a class="btn" href="upcoming.html">See what's coming</a>
+      </div>
+    </div>
+    <button type="button" class="arrow prev" aria-label="Previous game"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4 7 12l8 8"/></svg></button>
+    <button type="button" class="arrow next" aria-label="Next game"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8"/></svg></button>
+    <div class="dots"><button type="button" class="dot is-on" data-go="0" aria-label="Show A Nomad's Duality: Ashbound"></button><button type="button" class="dot" data-go="1" aria-label="Show Untitled music &amp; monsters project"></button><button type="button" class="dot" data-go="2" aria-label="Show Untitled horror project"></button></div>
+  </section>
+
+  <section class="wrap">
+    <div class="grid two">
+      <div><h3>Who we are</h3><p>We are a compact Iowa team fueled by a love of great games. Because we are players at heart, we obsess over the fine details of everything we create, and yes, we actually read and reply to our own emails.</p></div>
+      <div><h3>What we make</h3><p>Our focus is on original titles that grip you the second you start playing. We chase striking atmospheric experiences, compelling mechanical loops, and completely novel ideas that refuse to blend into the crowd.</p></div>
+      <div><h3>Our promise</h3><p>We don't do clones, and we don't cut corners. Every title carrying our name is an experience we are genuinely proud to play ourselves.</p></div>
+      <div><h3>Get in touch</h3><p>Got a question, press request, or business proposal? Drop a line directly to the developers.</p><p style="margin-top:8px"><span class="copy"><code>info@skawks.com</code><button type="button" data-copy="info@skawks.com">Copy</button></span></p></div>
+    </div>
+  </section>
+  <section class="wrap" id="survey">
+    <div class="panel">
+      <span class="eyebrow">Player survey</span>
+      <h2>Want to help us improve our game?</h2>
+      <p>We're a small studio, and the people who play our games shape what we make next. After you play, tell us what worked and what didn't in a short survey:</p>
+      <ul style="margin:0;padding-left:20px;display:grid;gap:4px">
+        <li>How fun it was, from 1 to 5 stars</li>
+        <li>What you liked, and what you'd change</li>
+        <li>Anything confusing, or too hard or too easy</li>
+        <li>Whether you'd want more Acts</li>
+      </ul>
+      <p>We read every answer, and we use them to fix problems and tune the game before and after launch.</p>
+      <p><b>The survey opens with our first playtest.</b> Want in early? Email us with the subject "Playtest" and we'll send it to you.</p><p><span class="copy"><code>info@skawks.com</code><button type="button" data-copy="info@skawks.com">Copy</button></span></p>
+      
+    </div>
+  </section>
+</main>
+<footer class="site"><div class="wrap"><span>© 2026 SKAWKS LLC · Iowa, USA</span><nav aria-label="Legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav></div></footer>
+<script>
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',()=>{const t=b.getAttribute('data-copy');const done=()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1600)};
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(()=>{const c=b.previousElementSibling;const r=document.createRange();r.selectNodeContents(c);const s=getSelection();s.removeAllRanges();s.addRange(r);});}else{const c=b.previousElementSibling;const r=document.createRange();r.selectNodeContents(c);const s=getSelection();s.removeAllRanges();s.addRange(r);}}));
+</script>
+<script>
+(()=>{const c=document.querySelector('.carousel'); if(!c) return; const S=[...c.querySelectorAll('.slide')], D=[...c.querySelectorAll('.dot')]; if(S.length<2) return;
+let i=0, t=null, paused=false; const RM=matchMedia('(prefers-reduced-motion: reduce)').matches, DUR=7000;
+function go(n){ S[i].classList.remove('is-on'); D[i]&&D[i].classList.remove('is-on'); i=(n+S.length)%S.length; S[i].classList.add('is-on'); D[i]&&D[i].classList.add('is-on'); restart(); }
+function restart(){ clearTimeout(t); if(!RM && !paused) t=setTimeout(()=>go(i+1),DUR); }
+c.querySelector('.prev').addEventListener('click',()=>go(i-1)); c.querySelector('.next').addEventListener('click',()=>go(i+1));
+D.forEach(d=>d.addEventListener('click',()=>go(+d.dataset.go)));
+c.addEventListener('mouseenter',()=>{paused=true;clearTimeout(t)}); c.addEventListener('mouseleave',()=>{paused=false;restart()});
+c.addEventListener('focusin',()=>{paused=true;clearTimeout(t)}); c.addEventListener('focusout',()=>{paused=false;restart()});
+c.addEventListener('keydown',e=>{ if(e.key==='ArrowLeft') go(i-1); if(e.key==='ArrowRight') go(i+1); });
+let x0=null; c.addEventListener('touchstart',e=>{x0=e.touches[0].clientX; paused=true; clearTimeout(t)},{passive:true});
+c.addEventListener('touchend',e=>{ if(x0!==null){ const dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>40) go(i+(dx<0?1:-1)); } x0=null; paused=false; restart(); });
+document.addEventListener('visibilitychange',()=>{ if(document.hidden) clearTimeout(t); else restart(); });
+restart();})();
+</script>
+</body></html>
